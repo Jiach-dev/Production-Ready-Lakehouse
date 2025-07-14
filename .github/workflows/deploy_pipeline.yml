@@ -8,6 +8,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+      DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
@@ -16,10 +20,6 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install databricks-cli --upgrade
-
-    - name: Configure Databricks CLI
-      run: |
-        databricks configure --host ${{ secrets.DATABRICKS_HOST }} --token ${{ secrets.DATABRICKS_TOKEN }}
 
     - name: Deploy DLT Pipeline
       run: |

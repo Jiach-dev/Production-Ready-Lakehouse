@@ -1,10 +1,12 @@
 {
-  "name": "gdelt_wiki_pipeline_2",
+  "name": "gdelt_wiki_pipeline_3",
   "development": true,
   "clusters": [
     {
       "label": "default",
-      "num_workers": 2
+      "num_workers": 1,
+      "instance_pool_id": null,
+      "node_type_id": "Standard_DS3_v2"
     }
   ],
   "libraries": [

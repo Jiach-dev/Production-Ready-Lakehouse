@@ -16,10 +16,9 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Install New Databricks CLI
+    - name: Install Databricks CLI v1
       run: |
-        pip install --upgrade pip
-        pip install databricks-cli --upgrade
+        curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | bash
 
     - name: Deploy DLT Pipeline
       run: |

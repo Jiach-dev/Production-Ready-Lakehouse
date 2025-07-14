@@ -10,11 +10,10 @@
   "libraries": [
     {
       "notebook": {
-        "path": "xxx/dlt_pipeline.py"
+        "path": "/Workspace/Users/henocksjean@gmail.com/dlt_pipeline.py"
       }
     }
   ],
-  "storage": "/pipelines/gdelt_wiki_pipeline/storage",
   "target": "wikigdelt_schema",
   "catalog": "prod_lakehouse",
   "continuous": true

@@ -1,0 +1,31 @@
+name: Deploy DLT Pipeline to Databricks
+
+on:
+  push:
+    paths:
+      - 'dlt_pipeline.py'
+      - 'dlt_pipeline_config.json'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Databricks CLI
+      run: |
+        pip install databricks-cli
+
+    - name: Configure Databricks CLI
+      run: |
+        databricks configure --token <<EOF
+        ${{ secrets.DATABRICKS_HOST }}
+        ${{ secrets.DATABRICKS_TOKEN }}
+        EOF
+
+    - name: Deploy DLT Pipeline
+      run: |
+        databricks pipelines create --json-file dlt_pipeline_config.json || \
+        databricks pipelines edit --json-file dlt_pipeline_config.json

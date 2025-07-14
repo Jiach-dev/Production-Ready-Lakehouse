@@ -22,5 +22,6 @@ jobs:
 
     - name: Deploy DLT Pipeline
       run: |
-        databricks pipelines create --json-file dlt_pipeline_config.json || \
-        databricks pipelines edit --json-file dlt_pipeline_config.json
+        databricks pipelines create --json '@dlt_pipeline_config.json' || \
+        databricks pipelines update --json '@dlt_pipeline_config.json'
+

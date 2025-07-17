@@ -144,38 +144,38 @@ latency = meter.create_histogram(
 | AuthFailure       | Rotate service principal     |
 | DQFailure         | Update expectations          |
 
-# Recovery Commands
-# To run shell commands, use a bash cell or prefix with ! in Jupyter.
-# Example:
-# !databricks pipelines repair --pipeline-id YOUR_PIPELINE_ID
-# !databricks clusters list --output JSON
+Recovery Commands  
+To run shell commands, use a bash cell or prefix with ! in Jupyter.  
+Example:  
+!databricks pipelines repair --pipeline-id YOUR_PIPELINE_ID  
+!databricks clusters list --output JSON  
 
-# Business Impact
-# Use Case Benefits
-# | Use Case        | KPI Improvement        | Business Value            |
-# |-----------------|-----------------------|---------------------------|
-# | Media Analysis  | 60% faster detection  | Competitive intelligence  |
-# | Risk Monitoring | 3x signal volume      | Early threat detection    |
-# | Recommendations | 35% engagement lift   | User retention            |
+Business Impact  
+Use Case Benefits  
+| Use Case        | KPI Improvement        | Business Value            |
+|-----------------|-----------------------|---------------------------|
+| Media Analysis  | 60% faster detection  | Competitive intelligence  |
+| Risk Monitoring | 3x signal volume      | Early threat detection    |
+| Recommendations | 35% engagement lift   | User retention            |
 
 # Lessons Learned
 # Key Takeaways
 
 # Technical:
-# - Unity Catalog reduced permission errors by 70%
-# - Auto-scaling saved $4.8k/month in cluster costs
+Technical:
+Unity Catalog reduced permission errors by 70%
+Auto-scaling saved $4.8k/month in cluster costs
 
-# Process:
-# - CI/CD reduced deployment errors by 85%
-# - Genie AI accelerated development by 40%
+Process:
+CI/CD reduced deployment errors by 85%
+Genie AI accelerated development by 40%
 
-# Challenges:
-# - Stream synchronization required precise watermark tuning
-# - Sentence Transformers needed custom cluster setup
+Challenges:
+Stream synchronization required precise watermark tuning
+Sentence Transformers needed custom cluster setup
 
-
-# Future Improvements
-# Planned Enhancements
-# - Add real-time anomaly detection using MLflow
-# - Implement advanced data lineage tracking
-# - Expand to multi-region deployment for resilience    
+Future Improvements:
+Planned Enhancements
+Add real-time anomaly detection using MLflow
+Implement advanced data lineage tracking
+Expand to multi-region deployment for resilience

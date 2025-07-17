@@ -10,6 +10,7 @@ This repository contains a complete implementation of a real-time data pipeline 
 
 ## 🏗️ Repository Structure
 
+```
 week4/
 ├── dlt_pipeline/
 │ ├── gdelt_loader.py # 850 events/sec throughput
@@ -23,7 +24,7 @@ week4/
 └── docs/
 ├── architecture.pdf # System diagrams
 └── observability.md # Monitoring setup
-
+```
 ## 🚀 Getting Started
 
 ### 1. Environment Configuration
